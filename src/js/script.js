@@ -19,9 +19,11 @@ function loadDataSource() {
 
 
 function displayData(dataArray) {
-	let container = document.querySelector("#mutants");
+	let container = document.querySelector(".row");
+	container.innerHTML = "";
+	
 	dataArray.forEach(function(mutant){
-		let html = "<div> <h2>${mutant.name}</h2> <h3>${mutant.power}<h3> </div> ";
+		let html = "<div class="col"> <div class="card shadow-lg"> <img src="${mutant.image}" class="card-img-top"> <div class="card-body"><h5 class="card-title text-center mb-3">${mutant.name}</h5><p class="card-text text-center text-muted">${mutant.description}</p>";
 	
 	});
 	
